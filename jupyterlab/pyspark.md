@@ -146,3 +146,32 @@
    ```
 
    ks apply default -c jupyterhub  更新设置，并重启jupyterhub容器
+
+6. 创建该jupyterlab的Headless Service
+
+   ```yaml
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: kuai1-1-gaofengbin
+     namespace: kubeflow
+   spec:
+     clusterIP: None
+     ports:
+     - port: 4040
+       protocol: TCP
+       targetPort: 4040
+     selector:
+       app-name: kuai1-1-gaofengbin
+     type: ClusterIP
+   ```
+
+   这个服务的创建暂时先放在proxy代码里
+
+7. 给jupyterlab  serviceaccount 赋予权限
+
+   ```shell
+   kubectl create clusterrolebinding spark-role --clusterrole=cluster-admin --serviceaccount=kubeflow:jupyter-notebook --namespace=kubeflow
+   ```
+
+   否则jupyterlab无法管理别的namespace，无法创建executor容器

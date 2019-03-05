@@ -4,6 +4,7 @@
 * [spark](spark/README.md)
     * [pyspark](spark/pyspark.md)
 * [jupyterlab](jupyterlab/README.md)
+    * [python](jupyterlab/python.md)
     * [extensions](jupyterlab/extensions.md)
     * [pyspark](jupyterlab/pyspark.md)
 * [image](image/README.md)
