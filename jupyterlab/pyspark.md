@@ -175,3 +175,16 @@
    ```
 
    否则jupyterlab无法管理别的namespace，无法创建executor容器
+
+8. 安装监控插件
+
+   ```shell
+   source activate base
+   jupyter nbextension install --py sparkmonitor --symlink --sys-prefix
+   jupyter nbextension enable sparkmonitor --py --sys-prefix
+   jupyter serverextension enable --py sparkmonitor --sys-prefix
+   ipython profile create
+   echo "c.InteractiveShellApp.extensions.append('sparkmonitor.kernelextension')" >>  $(ipython profile locate default)/ipython_kernel_config.py
+   ```
+
+   
