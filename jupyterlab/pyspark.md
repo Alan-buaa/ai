@@ -188,3 +188,44 @@
    ```
 
    
+
+9. 使用
+
+   ```python
+   import pyspark
+   import os
+   import pandas as pd
+   from pyspark import SparkConf, SparkContext
+   from pyspark.sql import SparkSession, HiveContext
+   from operator import add
+   from random import random
+   
+   sparkConf = SparkConf()
+   #以下注释的几个配置已内置在内核中无需配置
+   #sparkConf.setMaster('k8s://https://172.25.58.1:8043') #设置master，
+   #sparkConf.set("spark.kubernetes.container.image", "172.25.58.1:8000/spark-py:2.4.0") executor镜像
+   #sparkConf.set("spark.kubernetes.namespace", "spark-test") 命名空间用于资源隔离
+   #sparkConf.set("spark.app.name", "pi-test") app name
+   #sparkConf.set("spark.driver.host", "spark-test-pod.lab.svc") driver host
+   #sparkConf.set("hive.metastore.uris", "thrift://YZ-25-65-49.h.chinabank.com.cn:9083,thrift://YZ-25-65-50.h.chinabank.com.cn:9083")  hive元数据
+   sparkConf.set("spark.executor.instances", "3") #实例数
+   sparkConf.set("spark.executor.cores", "2") #单实例cpu数
+   sparkConf.set("spark.executor.memory", "4G") #单实例内存大小
+   spark = SparkSession.builder.config(conf=sparkConf).enableHiveSupport().getOrCreate()
+   sc = spark.sparkContext
+   
+   #pi计算示例
+   from operator import add
+   partitions = 100000
+   n = 1000 * partitions
+   
+   def f(_):
+       x = random() * 2 - 1
+       y = random() * 2 - 1
+       return 1 if x ** 2 + y ** 2 <= 1 else 0
+   
+   count = spark.sparkContext.parallelize(range(1, n + 1), partitions).map(f).reduce(add)
+   print("Pi is roughly %f" % (4.0 * count / n))
+   ```
+
+   
