@@ -21,3 +21,12 @@ install.packages(c('mclust','dbscan'), repos = 'https://mirrors.tuna.tsinghua.ed
 ```
 
 R安装包的时候最好激活某个conda环境，否则由于gcc的设置问题 可能会找不到某些lib编译文件（如：/opt/conda/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.2.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: cannot find -lssl）
+
+
+
+Rserve 1.8-6版本的安装，联网环境下
+
+```R
+install.packages("Rserve", repos = 'http://www.rforge.net/')
+```
+
