@@ -229,3 +229,20 @@
    ```
 
    
+
+10. spark读取数据
+
+    executor节点需用当前erp用户账号启动，并且在sc创建的时候设置环境变量来指定用户
+
+    ```python
+    sparkConf.set("spark.executorEnv.USER_NAME", "gongjuntai")
+    ```
+
+    修改spark-py37:2.4.0镜像启动脚本文件/opt/entrypoint.sh
+
+    ```shell
+    
+    ```
+
+    
+

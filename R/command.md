@@ -30,3 +30,27 @@ Rserve 1.8-6版本的安装，联网环境下
 install.packages("Rserve", repos = 'http://www.rforge.net/')
 ```
 
+### 常用机器学习包安装
+
+Rscript installpackage.R
+
+```R
+pkgs = c("nnet","rpart","gbm","kernlab","mboost","randomForest",
+    "tree","xgboost","party","lars","boost","e1071","BayesTree","gafit",
+    "arules","caret","DWwR","mlr","survival","readr","readxl",
+	"haven","xml2","tidyverse","dplyr","tidyr","plyr","reshape2",
+	"stringr","stringi","lubridata","hms","formatR","mcmc",
+	"data.table","mclust","dbscan","zoo","xts","timeDate",
+	"tseries","forecast","quantmod","RQuantLib","portfolio","TTR",
+	"sde","YieldCurve","parma","evd","evdbayes","evir","extRemes",
+	"ismev","Rwordseq","jiebaR","chinese.misc","tm","animation",
+	"ggplot2","GGally","lattice","aplpack","plotly","rwordmap",
+	"ggmap","googleVis","ggpubr","showtext","wordcloud2","wordcloud",
+	"car","forecast","Imtest","plm","sandwish","urca","snow","Rmpi",
+	"Rcpp","OpenCL","devtools","roxygen2","testthat")
+for (pkg in pkgs)
+if (!require(pkg, character.only = TRUE)){
+  install.packages(pkg)
+}
+```
+
