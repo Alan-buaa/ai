@@ -39,7 +39,7 @@ pkgs = c("nnet","rpart","gbm","kernlab","mboost","randomForest",
     "tree","xgboost","party","lars","boost","e1071","BayesTree","gafit",
     "arules","caret","DWwR","mlr","survival","readr","readxl",
 	"haven","xml2","tidyverse","dplyr","tidyr","plyr","reshape2",
-	"stringr","stringi","lubridata","hms","formatR","mcmc",
+	"stringr","stringi","lubridate","hms","formatR","mcmc",
 	"data.table","mclust","dbscan","zoo","xts","timeDate",
 	"tseries","forecast","quantmod","RQuantLib","portfolio","TTR",
 	"sde","YieldCurve","parma","evd","evdbayes","evir","extRemes",
@@ -52,5 +52,13 @@ for (pkg in pkgs)
 if (!require(pkg, character.only = TRUE)){
   install.packages(pkg)
 }
+```
+
+
+
+离线安装包
+
+```R
+install.packages("/tmp/nloptr_1.2.1.tar.gz", type="source")
 ```
 

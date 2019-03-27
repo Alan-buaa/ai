@@ -16,4 +16,6 @@
     * [常见问题](R/questions.md)
 * [kubernetes](kubernetes/README.md)
     * [节点管理](kubernetes/nodes.md)
+* [镜像清单](imagelist.md)
+* [存储](storage/README.md)
 
