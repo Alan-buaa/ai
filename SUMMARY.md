@@ -16,6 +16,9 @@
     * [常见问题](R/questions.md)
 * [kubernetes](kubernetes/README.md)
     * [节点管理](kubernetes/nodes.md)
+    * [集群管理](kubernetes/cluster.md)
 * [镜像清单](imagelist.md)
 * [存储](storage/README.md)
+    * [云盘创建](storage/create.md)
+    * [ceph yum源设置](storage/ceph_yum.md)
 
