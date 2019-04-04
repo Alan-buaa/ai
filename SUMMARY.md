@@ -15,6 +15,7 @@
     * [常用命令](R/command.md)
     * [常见问题](R/questions.md)
 * [kubernetes](kubernetes/README.md)
+    * [集群搭建](kubernetes/cluster_setup.md)
     * [节点管理](kubernetes/nodes.md)
     * [集群管理](kubernetes/cluster.md)
 * [镜像清单](imagelist.md)
