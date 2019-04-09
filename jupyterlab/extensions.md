@@ -12,3 +12,7 @@ https://www.npmjs.com/package/jupyterlab_filetree
 
 https://github.com/youngthejames/jupyterlab_filetree
 
+### 已安装扩展
+
+<https://github.com/lckr/jupyterlab-variableInspector>
+

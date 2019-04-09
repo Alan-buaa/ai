@@ -34,3 +34,9 @@ main.main()
 ceph-fuse -m 172.25.65.49:6789,172.25.65.50:6789,172.25.65.51:6789  -r /notebook subcephtest/
 ```
 
+开机自动挂载cephfs，/etc/fstab中添加
+
+```shell
+none      /ceph_fs   fuse.ceph   ceph.id=admin,ceph.conf=/etc/ceph/ceph.conf,ceph.client_mountpoint=/YZ-25-65-49,_netdev,defaults  0 0
+```
+

@@ -22,4 +22,6 @@
 * [存储](storage/README.md)
     * [云盘创建](storage/create.md)
     * [ceph yum源设置](storage/ceph_yum.md)
+* [其他服务](other/README.md)
+    * [yum源搭建](other/yum.md)
 
