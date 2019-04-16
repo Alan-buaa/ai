@@ -2,6 +2,25 @@
 
 ### 问题调研
 
+#### cephfs挂载问题
+
+在生成ceph-secret的时候，要对ceph的secret进行base64编码
+
+```shell
+echo AQCzWa1cn0pJBBAAzvbT3Uph9cOYJNO1Je9B3A== | base64
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ceph-secret
+  namespace: kubeflow
+type: "kubernetes.io/rbd"
+data:
+  key: QVFDeldhMWNuMHBKQkJBQXp2YlQzVXBoOWNPWUpOTzFKZTlCM0E9PQo=
+```
+
+
+
 #### cephFS配额管理
 
 1. 创建用户对应的osd pool，然后设置pool的配额大小，然后指定用户目录为该pool。***但是该配额对cephfs不生效***

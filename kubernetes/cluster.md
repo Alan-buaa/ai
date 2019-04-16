@@ -1,5 +1,47 @@
 # 集群管理
 
+### 分配pod到指定物理节点
+
+1. 给指定物理节点增加标签
+
+   ```shell
+   kubectl label nodes <node-name> <label-key>=<label-value>
+   ```
+
+   验证
+
+   ```shell
+   kubectl get nodes --show-labels
+   kubectl describe node "nodename"
+   ```
+
+   
+
+2. pod增加nodeselector
+
+   ```shell
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: nginx
+     labels:
+       env: test
+   spec:
+     containers:
+     - name: nginx
+       image: nginx
+       imagePullPolicy: IfNotPresent
+     nodeSelector:
+       disktype: ssd
+   ```
+
+   
+
+### 设置主节点可调度
+
+1. 可调度：kubectl taint node k8s-master node-role.kubernetes.io/master-
+2. 不可调度：kubectl taint node k8s-master node-role.kubernetes.io/master=""
+
 ### 节点kubelet修改参数
 
 修改日志级别，修改/etc/systemd/system/kubelet.service.d/10-kubeadm.conf

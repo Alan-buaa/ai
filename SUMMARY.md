@@ -24,4 +24,5 @@
     * [ceph yum源设置](storage/ceph_yum.md)
 * [其他服务](other/README.md)
     * [yum源搭建](other/yum.md)
+    * [docker私服搭建](other/docker_repo.md)
 

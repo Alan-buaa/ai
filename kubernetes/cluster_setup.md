@@ -26,4 +26,26 @@
 
      
 
-2. 
+2. kubeadm, kubelet, kubectl安装
+
+   在有外网环境里设置kubernetes 阿里yum源
+
+   ```shell
+   cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+   [kubernetes]
+   name=Kubernetes
+   baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
+   enabled=1
+   gpgcheck=1
+   repo_gpgcheck=1
+   gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+   EOF
+   ```
+
+   使用yum安装命令 只下载相关包，然后将相关包放入本地yum源里
+
+   ```shell
+   yum install --downloadonly --downloaddir=/home/gaofengbin/k8s kubelet kubeadm kubectl
+   ```
+
+   
