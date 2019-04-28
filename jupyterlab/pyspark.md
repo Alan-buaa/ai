@@ -179,6 +179,7 @@
 8. 安装监控插件
 
    ```shell
+   pip install sparkmonitor
    source activate base
    jupyter nbextension install --py sparkmonitor --symlink --sys-prefix
    jupyter nbextension enable sparkmonitor --py --sys-prefix
