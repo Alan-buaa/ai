@@ -6,3 +6,10 @@
 >
 > 如：pip install pyspark -t /opt/conda/lib/python3.7/site-packages
 
+
+
+### pip升级
+
+python -m pip install --upgrade pip
+
+pip show pip

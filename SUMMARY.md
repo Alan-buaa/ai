@@ -26,4 +26,6 @@
 * [其他服务](other/README.md)
     * [yum源搭建](other/yum.md)
     * [docker私服搭建](other/docker_repo.md)
+* [FAQ](faq/readme.md)
+    * [spark](faq/spark.md)
 
