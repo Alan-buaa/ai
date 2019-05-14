@@ -19,6 +19,7 @@
     * [节点管理](kubernetes/nodes.md)
     * [集群管理](kubernetes/cluster.md)
     * [helm](kubernetes/helm.md)
+    * (FAQ)[kubernetes/faq.md]
 * [镜像清单](imagelist.md)
 * [存储](storage/README.md)
     * [云盘创建](storage/create.md)

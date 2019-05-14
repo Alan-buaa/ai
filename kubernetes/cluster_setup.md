@@ -24,8 +24,6 @@
      sed -i '/GRUB_DEFAULT/s/saved/0/' /etc/default/grub && grub2-mkconfig -o /boot/grub2/grub.cfg && shutdown -r now
      ```
 
-     
-
 2. kubeadm, kubelet, kubectl安装
 
    在有外网环境里设置kubernetes 阿里yum源
@@ -46,6 +44,16 @@
 
    ```shell
    yum install --downloadonly --downloaddir=/home/gaofengbin/k8s kubelet kubeadm kubectl
+   ```
+
+   
+
+3. 降级内核
+
+   ```shell
+   rpm -qa |grep kernel
+   rpm -e kernel-ml-5.0.7-1.el7.elrepo.x86_64
+   rpm -qa |grep kernel
    ```
 
    

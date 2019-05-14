@@ -8,6 +8,20 @@
    kubectl label nodes <node-name> <label-key>=<label-value>
    ```
 
+   修改标签
+
+   ```shell
+   kubectl label nodes <node-name> <label-key>=<label-value> --overwrite
+   ```
+
+   删除标签
+
+   ```shell
+   kubectl label nodes <node-name> <label-key>-
+   ```
+
+   
+
    验证
 
    ```shell
