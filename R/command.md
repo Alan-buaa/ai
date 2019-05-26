@@ -8,6 +8,10 @@ options("repos"=c(CRAN="http://repos.jd.com/CRAN/"))
 
 ### 安装包
 
+下载目录<https://cran.r-project.org/src/contrib/Archive/>
+
+
+
 shell环境中用如下命令安装
 
 ```shell
@@ -52,6 +56,12 @@ for (pkg in pkgs)
 if (!require(pkg, character.only = TRUE)){
   install.packages(pkg)
 }
+```
+
+未安装包
+
+```shell
+boost, caret,DWwR, mlr, readr,readxl，haven，xml2
 ```
 
 
