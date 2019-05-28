@@ -74,3 +74,9 @@
    在有外网权限机器上下载
    
    通过 yum search --showduplicates nvidia-docker 查找需要的版本
+
+### 获取节点可分配资源
+
+https://medium.com/@gorenje/kubernetes-api-allocatable-node-resources-6ea88f828f0
+
+https://gist.github.com/gorenje/dff508489c3c8a460433ad709f14b7db

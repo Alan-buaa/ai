@@ -5,6 +5,7 @@
     * [command](conda/command.md)
 * [spark](spark/README.md)
     * [pyspark](spark/pyspark.md)
+    * [spark history server](spark/history.md)
 * [jupyterlab](jupyterlab/README.md)
     * [python](jupyterlab/python.md)
     * [extensions](jupyterlab/extensions.md)
