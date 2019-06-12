@@ -11,6 +11,7 @@
     * [extensions](jupyterlab/extensions.md)
     * [pyspark](jupyterlab/pyspark.md)
 * [jupyterhub](jupyterhub/readme.md)
+* [kubeflow](kubeflow/README.md)
 * [image](image/README.md)
     * [R](image/R.md)
 * [R](R/README.md)

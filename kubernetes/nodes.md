@@ -80,3 +80,21 @@
 https://medium.com/@gorenje/kubernetes-api-allocatable-node-resources-6ea88f828f0
 
 https://gist.github.com/gorenje/dff508489c3c8a460433ad709f14b7db
+
+### 节点软件删除
+
+```shell
+#! /bin/bash
+service kubelet stop
+
+echo "y" | kubeadm reset
+
+systemctl disable --now kubelet
+
+yum erase -y kubelet kubeadm kubectl
+
+service docker stop
+
+yum erase -y docker-ce
+```
+
