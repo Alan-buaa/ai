@@ -6,7 +6,10 @@
 
 ### 新kernel安装
 
+python2
+
 ```shell
+
 source activate envname
 unset PIP_CONFIG_FILE
 pip install --upgrade pip
@@ -14,5 +17,17 @@ pip install tornado==5.1.1
 pip install ipython==5.8.0
 pip install ipykernel==4.10.0
 python -m ipykernel install --user --name envname --display-name xbg0.6
+```
+
+python3
+
+```shell
+source activate $ENVNAME
+unset PIP_CONFIG_FILE
+pip install --upgrade pip
+pip install tornado
+pip install ipython
+pip install ipykernel
+python -m ipykernel install --user --name $ENVNAME --display-name $DISPLAYNAME
 ```
 
