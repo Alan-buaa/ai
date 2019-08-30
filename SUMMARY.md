@@ -10,6 +10,7 @@
     * [python](jupyterlab/python.md)
     * [extensions](jupyterlab/extensions.md)
     * [pyspark](jupyterlab/pyspark.md)
+    * [scala](jupyterlab/scala.md)
 * [jupyterhub](jupyterhub/readme.md)
 * [kubeflow](kubeflow/README.md)
 * [image](image/README.md)
@@ -35,4 +36,5 @@
 * [FAQ](faq/readme.md)
     * [spark](faq/spark.md)
 * [docker](docker/README.md)
+    * [daemon config](docker/daemon.md)
 
