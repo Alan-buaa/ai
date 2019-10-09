@@ -37,4 +37,6 @@
     * [spark](faq/spark.md)
 * [docker](docker/README.md)
     * [daemon config](docker/daemon.md)
+* [prometheus](prometheus/README.md)
+* [logging](logging/README.md)
 
